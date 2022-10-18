@@ -41,6 +41,7 @@ As a consequence, be careful not to push any c file containing a main function i
 Our main files will include your main header file (main.h): #include main.h
 You might want to look at the gcc flag -Wno-format when testing with your _printf and the standard printf. Example of test file that you could use:
 alex@ubuntu:~/c/printf$ cat main.c 
+# main.c file for the project
 #include <limits.h>
 #include <stdio.h>
 #include "main.h"
@@ -85,6 +86,7 @@ int main(void)
     printf("Unknown:[%r]\n");
     return (0);
 }
+# main.c output
 alex@ubuntu:~/c/printf$ gcc -Wall -Wextra -Werror -pedantic -std=gnu89 -Wno-format *.c
 alex@ubuntu:~/c/printf$ ./printf
 Let's try to printf a simple sentence.
